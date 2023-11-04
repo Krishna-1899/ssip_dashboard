@@ -1,8 +1,5 @@
 const express = require('express');
 const app= express();
-// app.listen(3000,()=>{
-//     console.log('app is running successfully')
-// });
 //load configfrom env file
 require("dotenv").config();
 const PORT=process.env.PORT||4000;
@@ -11,7 +8,6 @@ app.use(express.json());
 //import routes for todo api
 const todoRoutes=require("./routes/todo");
 //mount todo api routes
-app.use("/api/v1",todoRoutes);
 
 app.listen(PORT,()=>{
     console.log(`server started  at ${PORT}`);
@@ -24,3 +20,4 @@ dbConnect();
 app.get("/",(req,res)=>{
     res.send(`<h1>This is home page </h1>`);
 })
+app.use("/api/v1",todoRoutes);
