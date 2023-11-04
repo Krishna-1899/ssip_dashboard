@@ -2,8 +2,8 @@ import React from 'react'
 
 function Header() {
   return (
-    <div>Header</div>
+    <div className='text-xl'>Header</div>
   )
 }
 
-export default Header
+export default Header;
