@@ -10,13 +10,12 @@ function Header() {
             {/* logo section */}
             <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
                 {/* <BookOpenIcon className='w-7 h-7 text-blue-600'/> */}
-                <span><img src={logo} alt='' width="150px"/></span>
-                <img src={headerImage} width="200px" alt='45'/>
+                <span><img src={logo} alt='' width="250px"/></span>
+                <img src={headerImage} width="150px" alt='45'/>
             </div>
             <div className='flex items-center justify-between gap-4'>
                 <img src={g20} width="100px" alt='45'/>
                 <img src={ed} width="100px" alt='45'/>
-                
             </div>
         </div>
     </div>
