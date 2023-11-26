@@ -1,8 +1,10 @@
 const express = require('express');
 const app= express();
+const cors = require('cors');
+
 //load configfrom env file
 require("dotenv").config();
-
+app.use(cors());
 const PORT=process.env.PORT||4000;
 //middle ware  to parse json middle body
 app.use(express.json());
