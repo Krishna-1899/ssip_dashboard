@@ -23,15 +23,22 @@ function App() {
   }, []);
   console.log(data);
   return (
-    <div className='bg-schemes'>
+    <div className='bg-schemes border-[1px] rounded-xl mx-auto max-w-[1280px] p-[10px]'>
+      <div className='mx-auto max-w-[1280px] m-2 grid grid-cols-4 gap-5 text-xl font-bold px-10'>
+        <div>Schemes Name</div>
+        <div>Description</div>
+        <div>Funds</div>
+        <div>Beneficiary</div>
+      </div>
         {data.map((item) => (
-            <div key={item.id}>
-                <h1>{item.name}</h1>
-                <p>{item.desc}</p>
-                <p>{item.funds}</p>
+            <div key={item.id} className='flex-col mx-auto max-w-[1280px]'>
+              <div className='p-10 grid grid-cols-4 gap-5 text-2xl border-[2px] border-[black] rounded-xl mb-3'>
+                <h1 className='font-bold'>{item.name}</h1>
+                <p className=''>{item.desc}</p>
+                <p >{item.funds}</p>
                 <p>{item.beneficiary}</p>
+              </div>
             </div>
-            // You can render other data fields as needed
             ))
         }
     </div>
